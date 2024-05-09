@@ -4,14 +4,17 @@ const jsonfile = require("jsonfile");
 const moment = require("moment");
 const random = require("random");
 
+//hello
+
 // Change the working directory to where your local repository is located
-const git = simpleGit("/Users/rohitaggarwal/Desktop/test/GitHub_Graph");
+const git = simpleGit("/home/amir_sohail/Desktop/self/git-graph/GitHub_Graph");
 
 const makeCommit = (n) => {
   if (n === 0) {
     // Push changes to the remote repository
     git.push(["-u", "origin", "master"], (err, result) => {
       if (err) {
+        console.log(/err/, err)
         console.error("Error pushing to remote:", err);
       } else {
         console.log("Pushed changes to remote repository");
